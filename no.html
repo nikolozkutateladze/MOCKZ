@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>me too bro...</title>
+  <style>
+    html,body{height:100%;margin:0}
+    body{
+      background:linear-gradient(180deg,#030205 0%,#0b0709 60%);color:#e7e7e7;font-family:Inter,system-ui,Arial;display:flex;align-items:center;justify-content:center;
+    }
+    .wrap{max-width:1100px;padding:2rem;text-align:center}
+    h1{font-size:2.25rem;margin:0 0 .5rem;color:#fff;letter-spacing:-0.5px}
+    p{color:#bdb6b6;margin:0 0 1.25rem}
+    .stare-img{
+      display:block;
+      width:90%;
+      max-width:900px;
+      height:auto;
+      max-height:60vh;
+      object-fit:cover;
+      border-radius:10px;
+      margin:1.25rem auto;
+      box-shadow:0 18px 50px rgba(0,0,0,0.7);
+      border:1px solid rgba(255,255,255,0.03);
+    }
+    .overlay{
+      position:fixed;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(2,2,2,0.6),rgba(2,2,2,0.9));mix-blend-mode:multiply;
+    }
+    .caption{margin-top:.85rem;opacity:.95;font-weight:600}
+    .credits{opacity:.45;font-size:.85rem;margin-top:.5rem}
+    @media (max-width:640px){h1{font-size:1.4rem}.wrap{padding:1rem}}
+    /* secret button moved to index.html */
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>me too bro... me too</h1>
+    <p>ts fryin me.</p>
+
+    <!-- Place your supplied image at MOCKZ/stare.jpg -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Thomas_C._Lea_III_-_That_Two-Thousand_Yard_Stare_-_Original.jpg/960px-Thomas_C._Lea_III_-_That_Two-Thousand_Yard_Stare_-_Original.jpg" alt="1000 mile stare" class="stare-img" />
+
+    <div class="caption">me too bro... me too</div>
+    <p class="credits">(drop the image you attached as <strong>stare.jpg</strong> in the <strong>MOCKZ</strong> folder)</p>
+    <div class="overlay" aria-hidden="true"></div>
+  </div>
+</body>
+</html>

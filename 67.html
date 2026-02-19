@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>67%</title>
+  <style>
+    html,body{height:100%;margin:0}
+    body{display:flex;align-items:center;justify-content:center;background:#fbfbff;font-family:Inter,system-ui,Arial;color:#0b1220}
+    .stage{position:relative;width:100%;height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden}
+    /* background image provided by user (subtle, blurred) */
+    .stage::before{
+      content:"";
+      position:absolute;inset:0;
+      background: url('https://thebroncwriter.online/wp-content/uploads/2025/11/67-kid.jpg') center/cover no-repeat;
+      opacity:0.35;
+      filter:blur(6px) grayscale(30%);
+      z-index:1;
+      pointer-events:none;
+    }
+    .center{z-index:5;text-align:center;padding:2rem;border-radius:14px;background:rgba(11,18,32,0.06);backdrop-filter:blur(6px)}
+    h1{margin:0;font-size:1.75rem}
+    .emoji{position:absolute;font-size:34px;opacity:.9;transform:translate3d(0,0,0)}
+    @keyframes drift{0%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-18px) rotate(-8deg)}100%{transform:translateY(0) rotate(0deg)}}
+  </style>
+</head>
+<body>
+  <div class="stage">
+    <div class="center">
+      <h1>theres a 67% chance we pass</h1>
+    </div>
+  </div>
+
+  <script>
+    // scatter 6️⃣ and 7️⃣ around
+    const emojis = ['6️⃣','7️⃣'];
+    const total = 36;
+    for(let i=0;i<total;i++){
+      const el = document.createElement('div');
+      el.className='emoji';
+      el.style.left = (5 + Math.random()*90) + 'vw';
+      el.style.top = (5 + Math.random()*90) + 'vh';
+      el.style.fontSize = (18 + Math.random()*48) + 'px';
+      el.style.opacity = 0.45 + Math.random()*0.6;
+      el.style.animation = `drift ${4 + Math.random()*6}s ease-in-out ${Math.random()*2}s infinite`;
+      el.textContent = emojis[Math.floor(Math.random()*emojis.length)];
+      document.body.appendChild(el);
+    }
+  </script>
+</body>
+</html>
